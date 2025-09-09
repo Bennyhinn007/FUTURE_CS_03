@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure File Encryptor</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<body class="bg-light">
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Secure File Encryptor</h2>
+
+    <!-- Encrypt Form -->
+    <form action="/encrypt" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <input type="file" name="file" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <input type="text" name="key" class="form-control" placeholder="Enter encryption key" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Encrypt File</button>
+</form>
+
+    <!-- Decrypt Form -->
+    <form action="/decrypt" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <input type="file" name="file" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <input type="text" name="key" class="form-control" placeholder="Enter decryption key" required />
+    </div>
+    <button type="submit" class="btn btn-success">Decrypt File</button>
+</form>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 text-muted">
+      <small>Built by Benny 2025</small>
+    </footer>
+  </div>
+</body>
+</html>
